@@ -1,8 +1,3 @@
-// $(`#home`).click(function () {
-//     $(`#content`).fadeOut(400, appendHome)
-//     $(`#content`).fadeIn()
-// })
-
 function clickHome(){
     $(`#content`).fadeOut(400, appendHome)
     $(`#content`).fadeIn()
@@ -23,11 +18,6 @@ function appendHome(){
     </div>
     `)
 }
-
-// $(`#setting`).click(function () {
-//     $(`#content`).fadeOut(400, appendSetting())
-//     $(`#content`).fadeIn()
-// })
 
 function clickSetting(){
     $(`#content`).fadeOut(400, appendSetting)
@@ -76,19 +66,13 @@ function appendForm(){
     `)
 }
 
-$(`#articleForm`).submit(function (){
-    // swal({
-    //     title: "Success!",
-    //     text: "Your article has been Added",
-    //     icon: "success"
-    // });
-    event.preventDefault()
-})
+
 
 $(`#addArticle`).click(function(){
     $(`#content`).fadeOut(400, appendForm)
     $(`#content`).fadeIn()
 })
+
 
 $(`#articleList`).click(function(){
     $(`#content`).fadeOut(400, appendArticle)
@@ -153,5 +137,8 @@ $(`#logOut`).click(function(){
           default:
             swal("Ok, enjoy your time !");
         }
+      })
+      .catch( err => {
+          console.log(err)
       });
 })
